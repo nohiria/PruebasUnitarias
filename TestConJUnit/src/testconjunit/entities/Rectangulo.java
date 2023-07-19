@@ -23,7 +23,7 @@ public class Rectangulo {
     public Rectangulo(double ancho, double largo) {
         this.ancho = ancho;
         this.largo = largo;
-        //this.color= "Rojo";
+        this.color= "Rojo";
         this.active= true;
     }
     
