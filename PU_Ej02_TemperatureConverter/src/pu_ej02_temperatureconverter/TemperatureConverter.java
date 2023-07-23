@@ -16,7 +16,10 @@ public class TemperatureConverter {
     //Constructor
     public TemperatureConverter(double temperature, char unit) {
         this.temperature = temperature;
-        this.unit = Character.toUpperCase(unit);
+        unit= Character.toUpperCase(unit);
+        if(unit=='C'||unit=='F'||unit=='K'){
+           this.unit = unit; 
+        }
     }
     
     //Getters&Setters
@@ -44,7 +47,8 @@ public class TemperatureConverter {
         switch (unit) {
             case 'F': return (temperature-32)*5/9;
             case 'K': return temperature-273.15;
-            default: return temperature;
+            case 'C': return temperature;
+            default: return Double.NaN;
         }
     }
     
@@ -52,7 +56,8 @@ public class TemperatureConverter {
         switch (unit) {
             case 'C': return (temperature*9/5)+32;
             case 'K': return temperature*9/5 - 459.67;
-            default: return temperature;
+            case 'F': return temperature;
+            default: return Double.NaN;
         }
     }
     
@@ -60,7 +65,8 @@ public class TemperatureConverter {
         switch (unit) {
             case 'C': return temperature+273.15;
             case 'F': return (temperature+459.67)*5/9;
-            default: return temperature;
+            case 'K': return temperature;
+            default: return Double.NaN;
         }
     }
 }
