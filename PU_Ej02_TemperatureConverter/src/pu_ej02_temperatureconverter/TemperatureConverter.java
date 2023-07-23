@@ -22,26 +22,6 @@ public class TemperatureConverter {
         }
     }
     
-    //Getters&Setters
-    public double getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
-    }
-
-    public char getUnit() {
-        return unit;
-    }
-
-    public void setUnit(char unit) {
-        unit= Character.toUpperCase(unit);
-        if(unit=='C'||unit=='F'||unit=='K'){
-           this.unit = unit; 
-        }
-    }
-    
     //Methods
     public double convertToCelsius(){
         switch (unit) {
