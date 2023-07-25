@@ -24,6 +24,7 @@ public class DateValidator {
         
         if(day<1||day>daysInMonth(month,year)){
             System.out.println("Invalid day");
+            return false;
         }
         
         return true;
